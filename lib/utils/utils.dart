@@ -5,7 +5,6 @@ Future<void> launchEmail(String emailAddress) async {
   final Uri emailLaunchUri = Uri(
     scheme: 'mailto',
     path: emailAddress,
-    //  query: encodeQueryParameters(<String, String>{}),
   );
   await launchUrl(emailLaunchUri);
 }

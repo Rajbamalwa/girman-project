@@ -16,16 +16,13 @@ class _WebViewContainerState extends State<WebViewContainer> {
   late WebViewController _controller;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {});
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
         NavigationDelegate(
-          onProgress: (int progress) {
-            // Update loading bar.
-          },
+          onProgress: (int progress) {},
           onPageStarted: (String url) {},
           onPageFinished: (String url) {},
           onHttpError: (HttpResponseError error) {},

@@ -87,7 +87,6 @@ Widget buildEmployeeDetails(data) {
       SizedBox(height: 10),
       Image.asset(
         'assets/images/profile_2.png', //
-        // Replace with actual image URL
         height: 150,
         width: 150,
         fit: BoxFit.cover,

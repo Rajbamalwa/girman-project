@@ -30,8 +30,7 @@ Widget buildProfileCard(context, data) {
                 padding: const EdgeInsets.all(4.0),
                 child: CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage(
-                      'assets/images/profile.png'), // Replace with profile image
+                  backgroundImage: AssetImage('assets/images/profile.png'),
                 ),
               ),
             ),

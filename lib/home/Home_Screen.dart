@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 children: [
                   Image.asset(
-                    'assets/images/Logo.png', // Replace with your logo asset
+                    'assets/images/Logo.png',
                   ),
                 ],
               ),
@@ -72,8 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w500,
                         color: selectedOption == "Search"
                             ? Colors.blueAccent
-                            : Colors
-                                .black, // Matches the blue color from the image
+                            : Colors.black,
                       ),
                     ),
                   ),
@@ -91,8 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w500,
                         color: selectedOption == "Website"
                             ? Colors.blueAccent
-                            : Colors
-                                .black, // Matches the blue color from the image
+                            : Colors.black,
                       ),
                     ),
                   ),
@@ -110,8 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w500,
                         color: selectedOption == "LinkedIn"
                             ? Colors.blueAccent
-                            : Colors
-                                .black, // Matches the blue color from the image
+                            : Colors.black,
                       ),
                     ),
                   ),
@@ -129,8 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w500,
                         color: selectedOption == "Contact"
                             ? Colors.blueAccent
-                            : Colors
-                                .black, // Matches the blue color from the image
+                            : Colors.black,
                       ),
                     ),
                   ),
@@ -146,7 +142,6 @@ class _HomeScreenState extends State<HomeScreen> {
         body: _getBody());
   }
 
-  // Search bar widget
   Widget _buildSearchBar() {
     return Padding(
       padding: EdgeInsets.only(
@@ -223,17 +218,17 @@ class _HomeScreenState extends State<HomeScreen> {
     switch (selectedOption) {
       case 'Website':
         return WebViewContainer(
-          key: ValueKey('website'), // Unique key for the website WebView
+          key: ValueKey('website'),
           url: websiteUrl,
         );
       case 'LinkedIn':
         return WebViewContainer(
-          key: ValueKey('linkedin'), // Unique key for the LinkedIn WebView
+          key: ValueKey('linkedin'),
           url: linkedInUrl,
         );
       case 'Contact':
         launchEmail(emailAddress);
-        return _searchVeiwUser(); // Default to search view after opening email client
+        return _searchVeiwUser();
       default:
         return _searchVeiwUser();
     }
@@ -261,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(
                         top: 50, left: 20, right: 20, bottom: 20),
                     child: Image.asset(
-                      'assets/images/logo2.png', // Replace with your logo asset
+                      'assets/images/logo2.png',
                     ),
                   )
                 : SizedBox(
@@ -275,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/images/empty.png', // Replace with your logo asset
+                    'assets/images/empty.png',
                     width: 300,
                     fit: BoxFit.contain,
                   ),
@@ -291,8 +286,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             Expanded(
                 child: StreamBuilder<QuerySnapshot>(
-                    stream: users
-                        .snapshots(), // Use snapshots for real-time updates
+                    stream: users.snapshots(),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return Center(child: CircularProgressIndicator());
